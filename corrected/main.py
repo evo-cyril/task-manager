@@ -68,7 +68,7 @@ def update_task(data: TaskUpdate):
             "data": None
         })
 
-    task.is_done = data.is_done
+    task.isdone = data.isdone
     session.commit()
     session.refresh(task)
 

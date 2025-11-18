@@ -23,7 +23,7 @@ class TaskCreate(BaseModel):
 
 class TaskUpdate(BaseModel):
     id: int
-    is_done: bool
+    is_done: bool = True
 
 class TaskDelete(BaseModel):
     id: int
