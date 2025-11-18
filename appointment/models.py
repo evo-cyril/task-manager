@@ -1,6 +1,6 @@
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-from  sqlalchemy.ext.automap import automap_base
+from sqlalchemy.ext.automap import automap_base
 from pydantic import BaseModel
 
 
@@ -16,10 +16,11 @@ sessionlocal=sessionmaker(bind=engine, autocommit=False, autoflush=False)
 session=sessionlocal()
 
 #connecting tables
+# Change names to meaningful
 
 doc = Base.classes.doctor
-pat = Base.classes.patient
-apo = Base.classes.Appointment
+Patient = Base.classes.patient
+Appointment = Base.classes.Appointment
 
 # pydantics
 
